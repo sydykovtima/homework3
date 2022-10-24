@@ -2,9 +2,12 @@ import Foundation
 
 print("Город")
 let city = readLine()!
-if city == "bishkek" {
-    print("погода в Бишкек 10 градусов,завтра 12,послезавтра 15")
+func city( city1:String) {
+    if city == "bishkek" {
+        print("погода в Бишкек 10 градусов,завтра 12,послезавтра 15")
+    }
 }
+
 if city == "Ощ" {
     print("погода в Оше 15 градусов,завтра 9,послезавтра 5")
 }
@@ -23,85 +26,61 @@ if city == "Баткен" {
 if city == "Талас" {
     print("погода в Таласе 17 градусов,завтра 13,послезавтра 14")
 }
-var cola = 0.0
-var milk = 0.0
-var hleb = 0.0
-var nitro = 0.0
-var kefir = 0.0
-//var skidka = 0.0
-func tovar(tovar1:String) {
-    if tovar1 == "cola"{
-        cola += 65
-    }
+let milk = 60
+let hleb = 15
+let nitro = 65
+let cola = 50
+let cefir = 65
+var total = 0.0
+var discount = 0.0
+var totalString = ""
+func addToBag(cost: Int,name: String){
+total += Double(cost)
+totalString += "\(name) - \(cost) сом\n"
 }
-func tovar(tovar2:String) {
-    if tovar2 == "milk" {
-        milk += 45
-    }
+func getItemCost(name: String) -> Int{
+if name.lowercased() == "milk" {
+return milk
+}else if name.lowercased() == "hleb"{
+return hleb
+}else if name.lowercased() == "nitro"{
+return nitro
+}else if name.lowercased() == "cola"{
+return cola
+}else if name.lowercased() == "kefir"{
+     return cefir
+}else {
+print("такого продукта нет")
+print("Введите снова")
+let product = readLine()!
+return getItemCost(name: product)
 }
-func tovar(tovar3:String) {
-    if tovar3 == "hleb" {
-    hleb += 15
 }
-    }
-func tovar(tovar4:String) {
-    if tovar4 == "nitro" {
-        nitro += 65
-    }
-}
-func tovar(tovar5:String) {
-    if tovar5 == "kefir" {
-        kefir += 40
-    }
-}
-//func tovar(tovar9:String) {
-//    if tovar9 == "skidka" {
-//        skidka += 0.05
+print("Введите название продукта.В нашем ассортименте есть: Банан, Ананас, Яблоко, Лимон")
+let product = readLine()!
+addToBag(cost: getItemCost(name: product), name: product)
+let product2 = readLine()!
+addToBag(cost: getItemCost(name: product2), name: product2)
+let product3 = readLine()!
+addToBag(cost: getItemCost(name: product3), name: product3)
+let product4 = readLine()!
+addToBag(cost: getItemCost(name: product4), name: product4)
+let product5 = readLine()!
+addToBag(cost: getItemCost(name: product5), name: product5)
+discount = total * 0.05
+let additionalString = "\(total) сом. Скидка =\(discount)\n Общая сумма = \(total - discount)"
+print(total - discount)
+
+//var cola = 0.0
+//var milk = 0.0
+//var hleb = 0.0
+//var nitro = 0.0
+//var kefir = 0.0
+////var skidka = 0.0
+//func tovar(tovar1:String) {
+//    if tovar1 == "cola"{
+//        cola += 65
 //    }
-//}
- print("товары")
-print("что хотите купить?")
-
-let tovar1 = readLine()!
-let tovar2 = readLine()!
-let tovar3 = readLine()!
-let tovar4 = readLine()!
-let tovar5 = readLine()!
-//let tovar9 = readLine()!
-tovar(tovar1: tovar1)
-tovar(tovar2: tovar2)
-tovar(tovar3: tovar3)
-tovar(tovar4: tovar4)
-tovar(tovar5: tovar5)
-//tovar(tovar9: tovar9)
-print(cola)
-print(milk)
-print(hleb)
-print(nitro)
-print(kefir)
-//print(skidka)
-func tovar(tovar7:String) {
-    if tovar7 == "itog"{
-        print("стоимость покупки")
-        print(cola + milk + hleb + nitro + kefir)
-    }
-}
-func tovar(tovar10:String) {
-    if tovar10 == "itog + skidka"{
-        print("стоимость покупки + скидкой 5%")
-    }
-}
-//
-func tovar(tovar6:Double, tovar8: Double) {
-
-    print((cola + milk + hleb + nitro + kefir) - (cola + milk + hleb + nitro + kefir) * 0.05)
-    }
-let tovar7 = readLine()!
-tovar(tovar7: tovar7)
-let tovar6 = readLine()!
-tovar(tovar6: 0.05, tovar8: 0.05)
-
-
 
 //print("какое число")
 //    var namee = readLine()!
