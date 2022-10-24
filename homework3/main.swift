@@ -34,11 +34,11 @@ let cefir = 65
 var total = 0.0
 var discount = 0.0
 var totalString = ""
-func addToBag(cost: Int,name: String){
-total += Double(cost)
-totalString += "\(name) - \(cost) сом\n"
+func tovar(tovar1: Int,name: String){
+total += Double(tovar1)
+totalString += "\(name) - \(tovar1) сом\n"
 }
-func getItemCost(name: String) -> Int{
+func tovar3(name: String) -> Int{
 if name.lowercased() == "milk" {
 return milk
 }else if name.lowercased() == "hleb"{
@@ -53,24 +53,23 @@ return cola
 print("такого продукта нет")
 print("Введите снова")
 let product = readLine()!
-return getItemCost(name: product)
+return tovar3(name: product)
 }
 }
-print("Введите название продукта.В нашем ассортименте есть: хлеб,нитро , кола, кефир, ананас, яблоко")
+print("Введите название продукта.В нашем ассортименте есть: хлеб, нитро, кола, кефир")
 let product = readLine()!
-addToBag(cost: getItemCost(name: product), name: product)
+tovar(tovar1: tovar3(name: product), name: product)
 let product2 = readLine()!
-addToBag(cost: getItemCost(name: product2), name: product2)
+tovar(tovar1: tovar3(name: product2), name: product2)
 let product3 = readLine()!
-addToBag(cost: getItemCost(name: product3), name: product3)
+tovar(tovar1: tovar3(name: product3), name: product3)
 let product4 = readLine()!
-addToBag(cost: getItemCost(name: product4), name: product4)
+tovar(tovar1: tovar3(name: product4), name: product4)
 let product5 = readLine()!
-addToBag(cost: getItemCost(name: product5), name: product5)
+tovar(tovar1: tovar3(name: product5), name: product5)
 discount = total * 0.05
-let additionalString = "\(total) сом. Скидка =\(discount)\n Общая сумма = \(total - discount)"
+let this = "\(total) сом. Скидка =\(discount)\n Общая сумма = \(total - discount)"
 print(total - discount)
-
 //var cola = 0.0
 //var milk = 0.0
 //var hleb = 0.0
