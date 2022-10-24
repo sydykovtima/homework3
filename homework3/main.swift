@@ -56,7 +56,7 @@ let product = readLine()!
 return getItemCost(name: product)
 }
 }
-print("Введите название продукта.В нашем ассортименте есть: Банан, Ананас, Яблоко, Лимон")
+print("Введите название продукта.В нашем ассортименте есть: хлеб,нитро , кола, кефир, ананас, яблоко")
 let product = readLine()!
 addToBag(cost: getItemCost(name: product), name: product)
 let product2 = readLine()!
