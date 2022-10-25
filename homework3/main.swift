@@ -7,30 +7,47 @@ func city( city1:String) {
         print("погода в Бишкек 10 градусов,завтра 12,послезавтра 15")
     }
 }
-
-if city == "Ощ" {
-    print("погода в Оше 15 градусов,завтра 9,послезавтра 5")
+func city(city2:String) {
+    if city == "Ощ" {
+        print("погода в Оше 15 градусов,завтра 9,послезавтра 5")
+    }
 }
+func city(city3:String) {
 if city == "Джалал - Абад" {
     print("погода в Джалал - Абаде 27 градусов,завтра 4,послезавтра 23")
 }
-if city == "Чолпон - Ата" {
-    print("погода в Чолпон - Ате 9 градусов,завтра 8,послезавтра 7")
 }
-if city == "Нарын" {
-    print("погода в Нарын 6 градусов,завтра 5,послезавтра 4")
+func city (city4:String) {
+    if city == "Чолпон - Ата" {
+        print("погода в Чолпон - Ате 9 градусов,завтра 8,послезавтра 7")
+    }
 }
-if city == "Баткен" {
-    print("погода в Баткене 3 градусов,завтра 9,послезавтра 45")
+func city(city5:String) {
+    if city == "Нарын" {
+        print("погода в Нарын 6 градусов,завтра 5,послезавтра 4")
+    }
 }
+func city(city6:String) {
+    if city == "Баткен" {
+        print("погода в Баткене 3 градусов,завтра 9,послезавтра 45")
+    }
+}
+func city(city7:String) {
 if city == "Талас" {
     print("погода в Таласе 17 градусов,завтра 13,послезавтра 14")
 }
+}
+city(city1: "city1")
+city(city2: "city2")
+city(city3: "city3")
+city(city4: "city5")
+city(city6: "city6")
+city(city7: "city7")
 let milk = 60
 let hleb = 15
 let nitro = 65
 let cola = 50
-let cefir = 65
+let kefir = 65
 var total = 0.0
 var discount = 0.0
 var totalString = ""
@@ -48,7 +65,7 @@ return nitro
 }else if name.lowercased() == "cola"{
 return cola
 }else if name.lowercased() == "kefir"{
-     return cefir
+     return kefir
 }else {
 print("такого продукта нет")
 print("Введите снова")
@@ -70,53 +87,5 @@ tovar(tovar1: tovar3(name: product5), name: product5)
 discount = total * 0.05
 let this = "\(total) сом. Скидка =\(discount)\n Общая сумма = \(total - discount)"
 print(total - discount)
-//var cola = 0.0
-//var milk = 0.0
-//var hleb = 0.0
-//var nitro = 0.0
-//var kefir = 0.0
-////var skidka = 0.0
-//func tovar(tovar1:String) {
-//    if tovar1 == "cola"{
-//        cola += 65
-//    }
 
-//print("какое число")
-//    var namee = readLine()!
-//    print("какое действие?")
-//    var plus = readLine()!
-//    func plus( plus1:Int, plus2:Int ) -> String {
-//        if plus == "+" {
-//            return String (plus1 + plus2)
-//        } else if plus != "+"{
-//            return "Это не плюс"
-//        } else {
-//            return "non"
-//        }
-//    }
-//    print(plus(plus1: 2, plus2: 2))
-//
-
-
-
-//    var namee = readLine()!
-//    print("какое действие?")
-//    var plus = readLine()!
-//func namee(namee1:String) -> String{
-//    if namee == "какое число"{
-//        return String (" 2  ")
-//    } else if plus != "+"{
-//        return "Это не плюс"
-//    } else {
-//        return "non"
-//    }
-//}
-//func plus(plus3:Int, plus4:Int) {
-//    if plus == "+" {
-//        print(2 + 2 )
-//    }
-//}
-//    print(namee(namee1: ""))
-//plus(plus3: 2, plus4: 2)
-
-
+ 
